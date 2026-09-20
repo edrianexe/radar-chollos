@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar de chollos · el prompt</title>
+<meta name="description" content="La plantilla del radar de chollos de edrian.exe: cópiala con un toque y pégala en ChatGPT → Programadas.">
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#0b0d12; --card:#12151d; --txt:#eef1f6; --mut:#9aa3b2; --cian:#23E6FF; --mag:#FF2E9E; --key:#1a2a30; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width:680px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:26px; line-height:1.15; margin:8px 0 6px; letter-spacing:-.01em; }
+  h1 span { color:var(--cian); }
+  .sub { color:var(--mut); margin:0 0 20px; }
+  .steps { display:grid; gap:10px; margin:0 0 18px; padding:0; list-style:none; counter-reset:s; }
+  .steps li { background:var(--card); border:1px solid #1f2430; border-radius:12px; padding:12px 14px 12px 52px; position:relative; }
+  .steps li::before { counter-increment:s; content:counter(s); position:absolute; left:14px; top:11px; width:28px; height:28px; border-radius:50%;
+    background:var(--cian); color:#031015; font-weight:800; display:grid; place-items:center; }
+  .btns { position:sticky; top:0; z-index:5; background:linear-gradient(var(--bg) 80%, transparent); padding:10px 0 14px; display:flex; gap:10px; flex-wrap:wrap; }
+  button, a.btn { flex:1 1 200px; border:0; border-radius:12px; padding:16px 18px; font-size:17px; font-weight:800; cursor:pointer; text-align:center; text-decoration:none; }
+  #copiar { background:var(--cian); color:#031015; box-shadow:0 0 24px rgba(35,230,255,.35); }
+  #copiar.ok { background:#2ee6a0; }
+  a.btn { background:var(--card); color:var(--txt); border:1px solid #2a3140; }
+  pre { background:var(--card); border:1px solid #1f2430; border-radius:14px; padding:18px 16px; white-space:pre-wrap; word-wrap:break-word;
+    font:14.5px/1.55 ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace; margin:0; }
+  pre b { color:var(--cian); font-weight:700; }
+  pre mark { background:var(--key); color:var(--cian); border:1px dashed rgba(35,230,255,.55); border-radius:6px; padding:0 4px; }
+  .nota { color:var(--mut); font-size:14px; margin:16px 0 0; }
+  .nota b { color:var(--txt); }
+  footer { color:var(--mut); font-size:13px; margin-top:28px; border-top:1px solid #1f2430; padding-top:14px; }
+  @media (prefers-color-scheme: light) { :root { --bg:#0b0d12; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Radar de chollos: <span>el prompt</span></h1>
+  <p class="sub">Usando esto ahorras… o te arruinas. Es una plantilla: lo que va entre <mark style="background:var(--key);color:var(--cian);border:1px dashed rgba(35,230,255,.55);border-radius:6px;padding:0 4px">[CORCHETES]</mark> lo rellenas tú.</p>
+
+  <ol class="steps">
+    <li><b>Copia el prompt</b> con el botón de abajo (todo, de una vez).</li>
+    <li>Abre <b>ChatGPT → Programadas</b> y crea una tarea nueva. Pega. Elige cada cuánto corre (yo: una vez al día).</li>
+    <li>Rellena las llaves con lo tuyo. <b>La línea que no puedes quitar: NO QUIERO.</b> Sin descartes, solo verás ruido.</li>
+  </ol>
+
+  <div class="btns">
+    <button id="copiar" type="button">Copiar prompt</button>
+    <a class="btn" href="https://chatgpt.com/scheduled" target="_blank" rel="noopener">Abrir ChatGPT → Programadas</a>
+  </div>
+
+<pre id="prompt"><b>RADAR INTELIGENTE DE CHOLLOS DE SEGUNDA MANO</b>
+
+<b>OBJETIVO</b>
+
+Busca periódicamente oportunidades reales de segunda mano relacionadas con:
+
+<mark>[QUÉ QUIERO ENCONTRAR]</mark>
+
+Zona/mercado principal:
+<mark>[PAÍS / REGIÓN]</mark>
+
+Presupuesto máximo:
+<mark>[PRESUPUESTO / SIN LÍMITE]</mark>
+
+Prioriza estas plataformas:
+<mark>[WALLAPOP / EBAY / TODOCOLECCION / VINTED / MILANUNCIOS / ETC.]</mark>
+
+Amplía automáticamente la búsqueda a otras webs, tiendas especializadas,
+casas de subastas, librerías, marketplaces o bases de datos cuando sirvan
+para identificar o valorar correctamente un objeto.
+
+
+<b>QUÉ ME INTERESA</b>
+
+Busca especialmente:
+
+<mark>[CATEGORÍAS]</mark>
+<mark>[MARCAS]</mark>
+<mark>[MODELOS]</mark>
+<mark>[AUTORES]</mark>
+<mark>[COLECCIONES]</mark>
+<mark>[ÉPOCAS]</mark>
+<mark>[ESTILOS]</mark>
+<mark>[OBJETOS CONCRETOS]</mark>
+
+También presta especial atención a:
+
+- anuncios mal titulados;
+- nombres de modelo incorrectos;
+- productos descritos de forma demasiado genérica;
+- lotes y packs;
+- vaciados de casas;
+- herencias;
+- liquidaciones;
+- vendedores que parecen desconocer exactamente lo que venden;
+- objetos valiosos ocultos entre artículos comunes;
+- productos incompletamente identificados que puedan ser modelos raros.
+
+
+<b>PROCESO OBLIGATORIO DE INVESTIGACIÓN</b>
+
+No consideres un anuncio un chollo únicamente porque parezca barato.
+
+Cuando encuentres un candidato interesante:
+
+1. IDENTIFICA EL OBJETO
+
+Intenta determinar fabricante, modelo, variante, año, edición, referencia,
+ISBN, número de serie o cualquier dato útil.
+
+Si el vendedor lo ha identificado mal, intenta averiguar qué es realmente.
+
+
+2. COMPRUEBA QUE EL ANUNCIO SIGUE VIVO
+
+Verifica que el anuncio parezca actualmente:
+
+- activo;
+- disponible;
+- comprable;
+- reservable;
+- negociable;
+- o que permita contactar con el vendedor.
+
+Evita resultados vendidos, eliminados o páginas antiguas que simplemente
+continúen indexadas en buscadores.
+
+
+3. BUSCA COMPARABLES
+
+Investiga cuánto vale realmente el mismo objeto.
+
+Orden de prioridad:
+
+A. El mismo modelo / edición / referencia exacta.
+B. La misma variante o generación.
+C. Productos realmente equivalentes si no existen comparables exactos.
+
+Busca referencias en varias fuentes independientes.
+
+Siempre que sea posible, utiliza:
+
+- ventas realizadas;
+- subastas finalizadas;
+- tiendas especializadas;
+- vendedores profesionales;
+- otros anuncios activos;
+- catálogos;
+- bases de datos de coleccionismo.
+
+No uses como única referencia un anuncio extremadamente caro.
+
+
+4. DIFERENCIA PRECIO PEDIDO DE PRECIO REAL
+
+Distingue entre:
+
+PRECIO ANUNCIADO:
+lo que otros vendedores piden.
+
+PRECIO DE MERCADO:
+lo que razonablemente podría venderse.
+
+PRECIO DE VENTA DEMOSTRADO:
+ventas realizadas o subastas finalizadas.
+
+Da más peso a las ventas demostradas cuando existan.
+
+
+5. AJUSTA POR ESTADO
+
+Ten en cuenta:
+
+- funcionamiento;
+- desgaste;
+- restauraciones;
+- piezas ausentes;
+- caja;
+- accesorios;
+- edición;
+- autenticidad;
+- conservación;
+- rareza;
+- gastos de envío.
+
+No descartes automáticamente objetos sin probar, sucios, mal fotografiados
+o parcialmente deteriorados si el precio deja margen suficiente.
+
+Prefiero recibir algunos falsos positivos interesantes y hacer yo la
+inspección final antes que perder oportunidades por aplicar filtros
+demasiado estrictos.
+
+
+6. CALCULA LA ANOMALÍA DE PRECIO
+
+Precio total de compra =
+precio del anuncio + envío conocido + costes relevantes conocidos.
+
+Valor conservador =
+estimación razonable basada en los comparables encontrados.
+
+Calcula aproximadamente:
+
+VALOR / PRECIO DE COMPRA
+
+y
+
+PRECIO DE COMPRA / VALOR DE MERCADO × 100
+
+
+<b>UMBRAL PARA ALERTARME</b>
+
+Avísame únicamente cuando haya una anomalía clara.
+
+Umbral preferido:
+
+<mark>[≤40 % DEL VALOR DE MERCADO]</mark>
+
+o aproximadamente:
+
+<mark>[≥2,5× DE POTENCIAL ENTRE PRECIO Y VALOR]</mark>
+
+Puedes avisarme también excepcionalmente si no alcanza exactamente ese
+umbral pero existe una razón extraordinaria:
+
+- rareza extrema;
+- modelo muy buscado;
+- lote claramente mal identificado;
+- objeto que encaje especialmente bien con mis intereses;
+- posibilidad razonable de que haya piezas valiosas todavía sin identificar.
+
+
+<b>NO QUIERO</b>
+
+<mark>[INTRODUCIR AQUÍ OBJETOS, ESTILOS, MARCAS O CATEGORÍAS A EXCLUIR]</mark>
+
+Evita:
+
+- cosas simplemente baratas pero mediocres;
+- productos modernos sin interés;
+- objetos comunes con descuento pequeño;
+- falsificaciones evidentes;
+- decoración genérica;
+- anuncios cuyo margen desaparezca al incluir envío;
+- recomendaciones forzadas simplemente porque la tarea se haya ejecutado.
+
+
+<b>SISTEMA DE ALERTAS</b>
+
+NO necesito recibir un resultado en cada ejecución.
+
+Si no encuentras nada suficientemente interesante, no me envíes una alerta.
+
+Si encuentras algo que supera el filtro, informa de:
+
+QUÉ ES:
+identificación lo más precisa posible.
+
+PRECIO:
+precio pedido + envío si aparece.
+
+VALOR ESTIMADO:
+rango conservador.
+
+COMPARABLES:
+precios encontrados del mismo producto o equivalentes.
+
+RATIO:
+porcentaje aproximado del valor al que se está vendiendo y multiplicador.
+
+POR QUÉ PUEDE SER UN CHOLLO:
+qué anomalía has detectado.
+
+ESTADO:
+todo lo conocido.
+
+RIESGO:
+qué debería comprobar personalmente en fotografías o preguntando al vendedor.
+
+ENLACE:
+enlace directo al anuncio.
+
+
+<b>FILOSOFÍA DEL RADAR</b>
+
+Tu trabajo no es decidir definitivamente si debo comprarlo.
+
+Tu trabajo es detectar oportunidades suficientemente anómalas como para que
+merezcan mi atención.
+
+Sensibilidad relativamente alta para descubrir candidatos.
+Exigencia alta para demostrar que existe una anomalía de precio.
+
+Yo realizaré la validación final del estado, autenticidad y conveniencia
+antes de comprar.</pre>
+
+  <p class="nota"><b>Ojo:</b> el radar no compra. Tú miras las fotos, preguntas al vendedor y decides. Y si te lía la cartera, no digas que no te avisé.</p>
+
+  <footer>edrian.exe · En este canal hablamos de tecnología de una manera diferente.</footer>
+</div>
+<script>
+(function () {
+  var btn = document.getElementById('copiar');
+  var texto = document.getElementById('prompt').innerText;
+  function listo() { btn.textContent = 'Copiado ✓ · ahora pégalo en ChatGPT'; btn.classList.add('ok'); setTimeout(function(){ btn.textContent = 'Copiar prompt'; btn.classList.remove('ok'); }, 4000); }
+  function fallback() {
+    var ta = document.createElement('textarea'); ta.value = texto; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, texto.length);
+    try { document.execCommand('copy'); listo(); } catch (e) { btn.textContent = 'Mantén pulsado el texto y copia'; }
+    document.body.removeChild(ta);
+  }
+  btn.addEventListener('click', function () {
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(texto).then(listo, fallback); } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
